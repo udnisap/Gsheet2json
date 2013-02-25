@@ -19,14 +19,15 @@ var sheet = new spreadSheet(
 
 ###Example
 <pre><code>
-<script type="text/javascript" src="js/gsheet2json.js"></script>
-<script>
-      var fields = ["URL", "Speaker", "Name", "Short Summary", "Event","Duration", "Publish date"];
-      var sheet = new spreadSheet("https://docs.google.com/spreadsheet/ccc?key=0AsKzpC8gYBmTcGpHbFlILThBSzhmZkRhNm8yYllsWGc&gid=0",
-                fields,
-                function(data) {
-                    console.log(data.getAsObjects());
-                    console.log(data.getAsArray());
-      });
+                    <script type="text/javascript" src="js/gsheet2json.js"></script>
+                    <script>
+                          var fields = ["URL", "Speaker", "Name", "Short Summary", "Event","Duration", "Publish date"];
+                          var sheet = new spreadSheet(
+                                        "https://docs.google.com/spreadsheet/ccc?key=0AsKzpC8gYBmTcGpHbFlILThBSzhmZkRhNm8yYllsWGc&gid=0",
+                                    fields,
+                                    function(data) {
+                                        console.log(data.getAsObjects());
+                                        console.log(data.getAsArray());
+                          });
 </script>
 </code></pre>
