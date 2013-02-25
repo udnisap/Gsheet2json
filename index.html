@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="js/gsheet2json.js"></script>
+        <script>
+            var fields = ["URL", "Speaker", "Name", "Short Summary", "Event","Duration", "Publish date"];
+            var sheet = new spreadSheet("https://docs.google.com/spreadsheet/ccc?key=0AsKzpC8gYBmTcGpHbFlILThBSzhmZkRhNm8yYllsWGc&gid=0"
+                    , fields, function(data) {
+                console.log(data.getAsObjects());
+                console.log(data.getAsArray());
+            });
+        </script>
+    </head>
+    <body>
+        <div>
+            Hi
+        </div>
+    </body>
+</html>

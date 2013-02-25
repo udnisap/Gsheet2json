@@ -50,8 +50,8 @@ var spreadSheet = (spreadSheet) || function(spreadSheetURL, fields, success) {
             var element = response[i];
             var obj = {};
             for (var j = 0; j < fields.length; j++) {
-                var field = prepareField(fields[j]);
-                obj[field] = element["gsx$" + field].$t || field + " not found on the datasheet";
+                var field = fields[j];
+                obj[field] = element["gsx$" + prepareField(field)].$t || prepareField(field) + " not found on the datasheet";
             }
             data.push(obj);
         }
