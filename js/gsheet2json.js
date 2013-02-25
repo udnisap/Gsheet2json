@@ -21,7 +21,11 @@ var spreadSheet = (spreadSheet) || function(spreadSheetURL, fields, success) {
         //TODO
          throw new Error("Not yet implemented");
     }
-
+    
+    function prepareField(field){
+        return field.replace(/\s/,"").toLowerCase();
+    }
+    
     function getJSONP(url) {
         var ud = '_spreadSheetCallBack' + +new Date,
                 script = document.createElement('script'),
@@ -46,8 +50,8 @@ var spreadSheet = (spreadSheet) || function(spreadSheetURL, fields, success) {
             var element = response[i];
             var obj = {};
             for (var j = 0; j < fields.length; j++) {
-                var field = fields[j];
-                obj[field] = element["gsx$" + field.toLowerCase()].$t || field + " not found on the datasheet";
+                var field = prepareField(fields[j]);
+                obj[field] = element["gsx$" + field].$t || field + " not found on the datasheet";
             }
             data.push(obj);
         }
