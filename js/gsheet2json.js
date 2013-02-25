@@ -3,6 +3,7 @@
  * 
  * @author : Pasindu Perera
  * @email : perera.pasindu@gmail.com
+ * @website : http://rumal.github.com/Gsheet2json/
  *
  */
 var spreadSheet = (spreadSheet) || function(spreadSheetURL, fields, success) {
