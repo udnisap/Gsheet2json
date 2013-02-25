@@ -6,7 +6,7 @@ A Java script object to easily read from publicly hosted Google spreadsheets. Yo
 
 ###Quick Start
 
-1.  Download and include [gsheet2json.js](https://raw.github.com/rumal/Gsheet2json/master/js/gspreadsheet2json  .js) to your project.
+1.  Download and include [gsheet2json.js](https://raw.github.com/rumal/Gsheet2json/master/js/gsheet2json.js) to your project.
 2.  <pre><code>
 var sheet = new spreadSheet(
                     {url to the publicly hosted spreadsheet},
